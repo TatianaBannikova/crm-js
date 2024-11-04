@@ -1,0 +1,184 @@
+.main__wrap {
+  overflow: auto;
+}
+@media (min-width: 1000px) {
+  .main__btn-add:hover {
+    border: 1px solid var(--color-purple);
+    color: var(--color-white);
+    background-color: var(--color-purple);
+  }
+  .main__btn-add:hover svg path {
+    fill: var(--color-white);
+  }
+  .modal__btn-contact:hover {
+    color: var(--color-light-purple);
+  }
+  .form__btn-save:hover {
+    border-color: var(--color-purple);
+    background-color: var(--color-purple);
+  }
+  .modal__btn-contact:hover .modal__btn-svg.hover {
+    opacity: 1;
+  }
+  .modal__btn-contact:hover .modal__btn-svg.default {
+    opacity: 0;
+  }
+  .contact__btn-delete:hover {
+    border-color: var(--color-red);
+  }
+  .contact__btn-delete:hover > svg > path {
+    fill: var(--color-red);
+  }
+  .contact__btn-delete:hover~.contact__tooltip {
+    opacity: 1;
+    visibility: visible;
+    z-index: 900;
+  }
+  .table__tbody > tr > td > div > span > svg:hover > g {
+    opacity: 1;
+  }
+  .client__edit-btn:hover {
+    color: var(--color-light-purple);
+  }
+  .client__delete-btn:hover {
+    color: var(--color-red);
+  }
+  .contacts__link:hover .contact__tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+@media (max-width: 1025px) {
+  .main .main__container {
+    padding: 40px 20px 102px 20px;
+  }
+  .th__name {
+    width: 20%;
+    min-width: 0;
+  }
+  .th__time,
+  .th__lastedit,
+  .client__created,
+  .client__changed {
+    text-align: left;
+    max-width: 132px;
+    width: 13%;
+  }
+  .table__tbody tr .client__contacts {
+    padding-right: 42px;
+  }
+  .client__id {
+    width: 90px;
+  }
+  .client__full-name {
+    width: 242px;
+  }
+  .created__date {
+    padding-right: 39px;
+  }
+  .changed__date {
+    padding-right: 28px;
+  }
+}
+@media (max-width: 880px) {
+  .table__tbody tr .client__contacts {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .th__action {
+    width: 17%;
+  }
+  .client__id {
+    width: 90px;
+  }
+  .client__full-name {
+    width: 200px;
+  }
+  .created__date,
+  .changed__date {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .created__date span:last-child,
+  .changed__date span:last-child {
+    margin-left: 0;
+    color: var(--color-table-grey);
+  }
+  .table__tbody tr .client__contacts {
+    padding-right: 23px;
+  }
+  .client__contacts a:nth-child(5) {
+    margin-right: 0;
+  }
+  .client__actions {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal__form {
+    width: 390px;
+  }
+  .modal__contact.addpadding {
+    padding: 25px 20px;
+  }
+}
+@media (max-width: 720px) {
+  .th__name, .client__full-name {
+    width: 158px;
+  }
+  .table__tbody tr .client__full-name {
+    padding-right: 37px;
+    flex-wrap: wrap;
+  }
+  .th__contacts {
+    min-width: 110px;
+  }
+  .table__tbody tr .client__contacts {
+    padding-right: 10px;
+    width: 110px;
+  }
+}
+@media (max-width: 620px) {
+  .header__container {
+    justify-content: center;
+    align-items: center;
+  }
+  .header__seacrh-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .header__logo {
+    padding: 5px 3px 6px 5px;
+    font-size: 8px;
+  }
+  .main__btn-add {
+    padding: 12px 26px;
+  }
+  .modal__form {
+    width: 300px;
+  }
+  .modal__form .form__inner {
+    padding: 24px 15px;
+  }
+  .modal__close {
+    top: 3px;
+    right: 3px;
+  }
+  .main__modal-delete .modal__close-btn {
+    top: 3px;
+    right: 3px;
+  }
+  .modal__input {
+    font-size: 14px;
+  }
+  .contact__container {
+    max-width: 270px;
+  }
+  .modal__contact.addpadding {
+    padding: 25px 10px;
+  }
+}

@@ -1,0 +1,198 @@
+
+.main__table {
+  border-collapse: collapse;
+  padding: 20px;
+}
+.table__thead {
+  font-size: 12px;
+  color: var(--color-table-grey);
+  background-color: transparent;
+}
+.table__thead th {
+  font-weight: 400;
+}
+.table__thead th span svg {
+  margin-top: 3px;
+}
+.table__thead tr {
+  width: 100%;
+  padding: 10px 0 8px 0;
+}
+.th__id,
+.th__name,
+.th__time, .th__lastedit {
+  cursor: pointer;
+}
+.th__id {
+  padding: 10px 0;
+  width: 9%;
+  cursor: pointer;
+  text-align: center;
+  color: var(--color-light-purple);
+}
+.th__name {
+  width: 26%;
+  min-width: 320px;
+  text-align: left;
+}
+.th__time, .th__lastedit {
+  width: 15%;
+  text-align: left;
+}
+.th__lastedit {
+  margin-right: 40px;
+}
+.th__contacts {
+  width: 17%;
+  text-align: left;
+}
+.th__action {
+  width: 20%;
+  text-align: left;
+}
+.table__tbody {
+  position: relative;
+  height: 300px;
+  background-color: var(--color-white);
+}
+.table__tbody tr {
+  position: relative;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--color-table-grey);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  vertical-align: top;
+  max-height: 60px;
+}
+.table__tbody tr td {
+  padding: 20px 0;
+}
+.th__id svg,
+.th__id.up svg,
+.th__name svg,
+.th__name.down svg,
+.th__time svg,
+.th__time.down svg
+.th__lastedit svg,
+.th__lastedit.down svg {
+  transition: transform .5s linear;
+  transform: rotateX(0);
+}
+.th__id.down svg,
+.th__name.up svg,
+.th__time.up svg,
+.th__lastedit.up svg {
+  transform: rotateX(180deg);
+}
+.client__id {
+  color: var(--color-table-grey);
+}
+.table__tbody tr td:first-child {
+  padding-left: 20px;
+  padding-right: 18px;
+}
+.table__tbody tr td:last-child {
+  padding-right: 20px;
+  text-align: left;
+}
+.table__tbody > tr > td > div {
+  flex-wrap: wrap;
+}
+.table__tbody > tr > td > div:not(:last-child) {
+  margin-right: 7px;
+}
+.table__tbody > tr > td > div > span > svg > g {
+  transition: all .3s ease-in-out;
+}
+.client__full-name {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.client__surname, .client__name {
+  margin-right: 5px;
+}
+.contact__data {
+  position: relative;
+}
+.created__date,
+.changed__date {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.created__date span:last-child,
+.changed__date span:last-child {
+  margin-left: 5px;
+  color: var(--color-table-grey);
+}
+.table__tbody th:nth-child(6) button {
+  align-items: center;
+}
+.table__tbody tr .client__contacts {
+  position: relative;
+  padding-right: 52px;
+}
+.contacts__link {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+}
+.client__contacts a:not(:last-child) {
+  margin-right: 5px;
+}
+
+.client__edit-btn {
+  padding-left: 19px;
+  background-image: url("../img/edit.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: var(--color-black);
+  transition: color .3s ease;
+}
+
+.client__delete-btn {
+  padding-left: 19px;
+  background-image: url("../img/cancel_hover.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: var(--color-black);
+  transition: color .3s ease;
+}
+.client__actions {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.client__delete-btn,
+.client__edit-btn {
+  position: relative;
+}
+.client__delete-btn.action,
+.client__edit-btn.action {
+  background-image: none;
+}
+/* spinner */
+.client__spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotating 3s linear infinite;
+  transform: translate(-20%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.client__spinner.visible {
+  top: -2px;
+  left: 2px;
+  opacity: 1;
+  pointer-events: none;
+}
+@keyframes rotating{
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}

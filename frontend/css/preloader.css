@@ -1,0 +1,35 @@
+.main__preloader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  background-color: var(--color-white);
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+.main__preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  animation: rotating 1.1s linear infinite;
+  z-index: 500;
+}
+@keyframes rotating{
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
